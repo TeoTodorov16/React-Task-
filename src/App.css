@@ -75,6 +75,19 @@ body {
   border-radius: 10px;
 }
 
+#form > .btn-sgn{
+  background-color: #1076B5;
+  color: #e9ecef;
+  font-size: 0.9em;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+
+#form >  input, .btn-sgn{
+  border: 1px solid #e9ecef;
+  padding: .9em 1em;
+}
 .flex{
   display: flex;
   gap: 1em;

@@ -1,10 +1,29 @@
 import React from 'react';
 import image from '../assets/Group 19445.png';
 import '../App.css';
-import { AiFillEyeInvisible } from 'react-icons/ai';
+//import { AiFillEyeInvisible } from 'react-icons/ai';
+import {useNavigate} from 'react-router-dom';
+
 
 
 export default function LogIn() {
+
+    const navigate = useNavigate();
+
+    const sendSubmit = () => {
+        navigate("/Profile");
+    };
+
+    const sendSignUp = () => {
+        navigate("/SignUp");
+    };
+
+    const recoverPassword = () => {
+        navigate("/RecoverPassword");
+    };
+
+
+
     return (
         <section>
             <div className='register'>
@@ -19,11 +38,11 @@ export default function LogIn() {
                         <p className='input-text'>Password</p>  
                         <input type='password' placeholder='Password'></input> {/* still managed to add new text and line it perfectly with the input accordingly to the Design*/}
                          {/*<AiFillEyeInvisible className='one'/>  - Didn't have the time to implement the icon and use the From hook to make it function Show/Hide Password*/}
-                        <a href="#" className='recover-pass'>Recover password</a>
+                        <a href="#" className='recover-pass' onClick={recoverPassword}>Recover password</a>
                         <br></br>
-                        <button className="btn">LOG IN</button>
+                        <button className="btn" onClick={sendSubmit}>LOG IN</button>
                         <br></br>
-                        <p>You don't have an account? <a href="#">SIGN UP HERE</a></p>
+                        <p>You don't have an account? <a href="#" onClick={sendSignUp}>SIGN UP HERE</a></p>
                     </form>
                 </div>
                 <div className='col-2'>

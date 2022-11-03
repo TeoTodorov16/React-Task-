@@ -40,10 +40,14 @@ All other assets can be acquired from the provided XD files.!
 - I'm still trying to find my style, but I definitely lean toward plain .css with strict naming like component wrappers ect ect.
 Totally game to practice with something different for the project.However I am planning on using styled components in the future (especially if the company require so)
 
-- The Redirection between the pages is built by the help of React Router - navigation tool
+- Learned and Applied - The Redirection between the pages is built by the help of React Router - navigation tool
+
+- I used CamelCase because i built this as a practice in my code -  it will ensure that there aren't multiple variables with the same name.
+
+- I read in the Additional information - ""Settings" page and "Recover password" button are solely with a visual purpose. But I couldn't take a hold of myself and did a simple form just to not let the button completely empty and nonfunctioning.
+
 
 - 
-
 
 ## If I had more time I would change this
 
@@ -52,7 +56,7 @@ Totally game to practice with something different for the project.However I am p
 - Learn and Implement TypeScript into the Project.
 - Make some changes in the css to style it perfectly as the example.
 - Get rid of the Overflow.
-- Implement the Show/Hide icon for Password validation. Icon is taken from - React icons by installing new package in JSON file and import it afterwords. (already had it but didnt have the time to refactor the css to change the whole input).
+- Implement the Show/Hide icon for Password validation not only on the Recover Password but in the Login Form as well. Icon is taken from - React icons by installing new package in JSON file and import it afterwords. (already had it but didnt have the time to refactor the css to change the whole input).
 - Add Testing Library.
 - 
 
