@@ -53,12 +53,7 @@ export default function LogIn() {
     )
 }
 
- {/* Unfinished - 1. Make the Text Bold :WELCOME BACK!
-                      2. Make the Text Bold :Recover Password
-                      3. Make the Text Bold :Email & Password
-                      4. Make the Text Bold :LOG IN
-                      5. Make the Text Bold :You don't have an account? SIGN UP HERE
-                      6. A little bit Overflow - Extra Space 
+ {/* Unfinished - 1. A little bit Overflow - Extra Space 
         */}
 
 

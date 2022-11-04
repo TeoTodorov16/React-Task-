@@ -1,58 +1,97 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
 
-*{
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  background-color: #24252A;
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Titillium Web", sans-serif;
+    font-weight:inherit;
 }
 
 
-li, a, button {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 500;
-    font-size: 16px;
-    color: #edf0f1;
-    text-decoration: none;
+:root {
+	--mainColor: rgb(255, 249, 249);
+	--mainColorLight: white;
+	--secondaryColor: black;
+	--textColor: black;
 }
 
-.top {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 30px 10%;
+header {
+    box-shadow: 0 2px 2px -2px rgba(0,0,0,.2);
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	height: 80px;
+	padding: 0 2rem;
+	background-color: var(--mainColor);
+	color: var(--textColor);
 }
 
-.logo {
-    cursor: pointer;
+nav a {
+	margin: 0 1rem;
+	color: var(--textColor);
+	text-decoration: none;
 }
 
-.nav_links {
-    list-style: none;
+nav a:hover {
+	color: var(--secondaryColor);
+    text-decoration: underline  #08C642;
+    text-decoration-thickness: 3px;
 }
 
-.nav_links li {
-    display: inline-block;
-    padding: 0px 20px;
+header .nav-btn {
+	padding: 5px;
+	cursor: pointer;
+	background: transparent;
+	border: none;
+	outline: none;
+	color: var(--textColor);
+	visibility: hidden;
+	opacity: 0;
+	font-size: 1.8rem;
 }
 
-.nav_links li a {
-    transition: all 0.3 ease 0s;
+header div,
+nav {
+	display: flex;
+	align-items: center;
 }
 
-.nav_links li a:hover {
-    text-decoration-color: #08C642;
-}
+@media only screen and (max-width: 1024px) {
+	header .nav-btn {
+		visibility: visible;
+		opacity: 1;
+	}
 
-button {
-    padding: 9px 25px;
-    background-color: rgba(0,136,169,1);
-    border: none;
-    border-radius: 50px;
-    cursor: pointer ;
-    transition: all 0.3 ease 0s;
-}
+	header nav {
+		position: fixed;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		gap: 1.5rem;
+		background-color: var(--mainColor);
+		transition: 1s;
+		transform: translateY(-100vh);
+	}
 
-.button:hoover {
-    background-color: rgba(0,136,169,0.8);
+	header .responsive_nav {
+		transform: none;
+	}
+
+	nav .nav-close-btn {
+		position: absolute;
+		top: 2rem;
+		right: 2rem;
+	}
+
+	nav a {
+		font-size: 1.5rem;
+	}
 }

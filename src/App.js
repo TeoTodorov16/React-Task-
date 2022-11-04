@@ -6,6 +6,7 @@ import LogIn from './components/LogIn';
 import Profile from './components/ProfileForm/Profile';
 import SignUp from './components/SignUpForm/SignUp';
 import RecoverPassword from './components/ForgotPassword/RecoverPassword';
+import Settings from './components/SettingsForm/Settings';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route exact path="/login" element={<LogIn />} />
         <Route exact path="/profile" element={<Profile />} />
         <Route exact path="/RecoverPassword" element={<RecoverPassword />} />
+        <Route exact path="/Settings" element={<Settings />} />
       </Routes>
     </Router>
   );

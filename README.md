@@ -47,7 +47,7 @@ Totally game to practice with something different for the project.However I am p
 - I read in the Additional information - ""Settings" page and "Recover password" button are solely with a visual purpose. But I couldn't take a hold of myself and did a simple form just to not let the button completely empty and nonfunctioning.
 
 
-- 
+- I created different folders for each component with separated styling file to make the code clean and easy to follow. I do believe it's a good practice. 
 
 ## If I had more time I would change this
 
@@ -56,9 +56,9 @@ Totally game to practice with something different for the project.However I am p
 - Learn and Implement TypeScript into the Project.
 - Make some changes in the css to style it perfectly as the example.
 - Get rid of the Overflow.
-- Implement the Show/Hide icon for Password validation not only on the Recover Password but in the Login Form as well. Icon is taken from - React icons by installing new package in JSON file and import it afterwords. (already had it but didnt have the time to refactor the css to change the whole input).
+- Implement the Show/Hide icon for Password validation not only on the Recover Password but in the Login Form as well. Icon is taken from - React icons by installing new package in JSON file and import it afterwords. (already had it but didn't have the time to refactor the css to change the whole input).
 - Add Testing Library.
-- 
+- Finish The Searching Bar with All the Books & Apply the API's.
 
 
 # Getting Started with Create React App
