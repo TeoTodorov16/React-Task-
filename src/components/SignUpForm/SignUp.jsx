@@ -6,14 +6,47 @@ import {useNavigate} from 'react-router-dom';
 
 export default function SignUp() {
 
+
+    class Test extends React.Component {
+        onClick(event) {
+            makeFetch();
+            sendHome();
+        }
+        render() {
+           return (
+              <a href="#" onClick={this.onClick}>Test Link</a>
+           );
+        }
+     }
+
+    const makeFetch = async () => {
+        await fetch("https://books-library-dev.herokuapp.com/api/user/register", {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': 'Bearer eyJhbGciOiJIUzI...'
+            },
+            body: JSON.stringify({
+                "username": "elkat",     // String with min 4 symbols, no special symbols, except _
+                "password": "123456",
+            })
+        })
+        .then(res => {
+           return res.json()
+        })
+        .then(data => console.log(data))
+        .catch(error => console.log('Error'))   
+    
+    };
+
     const navigate = useNavigate();
 
     const sendLogin = () => {
         navigate("/Login");
     };
 
-    const Profile = () => {
-        navigate("/Profile");
+    const sendHome = () => {
+        navigate("/Home");
     };
 
     return (
@@ -34,7 +67,7 @@ export default function SignUp() {
                         <p className='input-text'>Repeat password</p>  
                         <input type='password' placeholder='Repeat password'></input> {/* still managed to add new text and line it perfectly with the input accordingly to the Design*/}
                         <br></br>
-                        <button className="btn-sgn" onClick={Profile}>SING UP</button>
+                        <button className="btn-sgn" onClick={() => { makeFetch(); sendHome();}}>SING UP</button>
                         <br></br>
                         <p>You don't have an account? <a href="#" onClick={sendLogin}>LOG IN HERE</a></p>
                     </form>

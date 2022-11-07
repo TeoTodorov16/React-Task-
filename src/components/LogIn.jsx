@@ -4,14 +4,49 @@ import '../App.css';
 //import { AiFillEyeInvisible } from 'react-icons/ai';
 import {useNavigate} from 'react-router-dom';
 
+{/*I thought of implementing the Api with the Axios method. However i sticked to the ol Fetch*/}
 
 
-export default function LogIn() {
+export default  function LogIn() {
+
+    class Test extends React.Component {
+        onClick(event) {
+            makeFetch();
+            sendHome();
+        }
+        render() {
+           return (
+              <a href="#" onClick={this.onClick}>Test Link</a>
+           );
+        }
+     }
+
+    const makeFetch = async () => {
+        await fetch("https://books-library-dev.herokuapp.com/api/user/login", {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': 'Bearer eyJhbGciOiJIUzI...'
+            },
+            body: JSON.stringify({
+                "username": "elka",     // String with min 4 symbols, no special symbols, except _
+                "password": "123456",
+            })
+        })
+        .then(res => {
+           return res.json()
+        })
+        .then(data => console.log(data))
+        .catch(error => console.log('Error'))   
+    
+    };
+
+
 
     const navigate = useNavigate();
 
-    const sendSubmit = () => {
-        navigate("/Profile");
+    const sendHome = () => {
+        navigate("/Home");
     };
 
     const sendSignUp = () => {
@@ -40,7 +75,7 @@ export default function LogIn() {
                          {/*<AiFillEyeInvisible className='one'/>  - Didn't have the time to implement the icon and use the From hook to make it function Show/Hide Password*/}
                         <a href="#" className='recover-pass' onClick={recoverPassword}>Recover password</a>
                         <br></br>
-                        <button className="btn" onClick={sendSubmit}>LOG IN</button>
+                        <button className="btn" onClick={() => { makeFetch(); sendHome();}}>LOG IN</button>
                         <br></br>
                         <p>You don't have an account? <a href="#" onClick={sendSignUp}>SIGN UP HERE</a></p>
                     </form>
