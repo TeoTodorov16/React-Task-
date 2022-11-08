@@ -58,7 +58,6 @@ Totally game to practice with something different for the project.However I am p
 - Get rid of the Overflow.
 - Implement the Show/Hide icon for Password validation not only on the Recover Password but in the Login Form as well. Icon is taken from - React icons by installing new package in JSON file and import it afterwords. (already had it but didn't have the time to refactor the css to change the whole input).
 - Add Testing Library.
-- Finish The Searching Bar with All the Books & Apply the API's.
 
 
 # Getting Started with Create React App
